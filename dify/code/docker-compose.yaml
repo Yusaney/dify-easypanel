@@ -214,7 +214,7 @@ services:
   # API service
   api:
     build: 
-      context: ./repo
+      context: /etc/easypanel/projects/dify/dify/code/dify/repo
     restart: always
     environment:
       # Use the shared environment variables.
@@ -234,7 +234,7 @@ services:
   # Worker service
   worker:
     build: 
-      context: ./repo
+      context: /etc/easypanel/projects/dify/dify/code/dify/repo
     restart: always
     environment:
       # Use the shared environment variables.
@@ -254,7 +254,7 @@ services:
   # Frontend web application
   web:
     build:
-      context: ./repo
+      context: /etc/easypanel/projects/dify/dify/code/dify/repo
     restart: always
     environment:
       CONSOLE_API_URL: ${CONSOLE_API_URL:-}
